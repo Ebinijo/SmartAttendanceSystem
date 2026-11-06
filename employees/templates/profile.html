@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Employee Profile</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.profile-card{
+
+    width:600px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+
+    text-align:center;
+
+}
+
+.avatar{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#667eea;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+h1{
+
+    color:#333;
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:gray;
+    margin-bottom:30px;
+
+}
+
+.info{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+.box{
+
+    background:#f7f7f7;
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.box h4{
+
+    color:#667eea;
+
+    margin-bottom:8px;
+
+}
+
+.box p{
+
+    color:#333;
+
+    word-wrap:break-word;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    background:#764ba2;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    transition:0.3s;
+
+}
+
+.btn:hover{
+
+    background:#5f3b87;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <h1>{{ employee.name }}</h1>
+
+    <p class="subtitle">
+        Employee Profile Information
+    </p>
+
+    <div class="info">
+
+        <div class="box">
+
+            <h4>📛 Full Name</h4>
+
+            <p>{{ employee.name }}</p>
+
+        </div>
+
+        <div class="box">
+
+            <h4>📧 Email</h4>
+
+            <p>{{ employee.email }}</p>
+
+        </div>
+
+        <div class="box">
+
+            <h4>📱 Phone Number</h4>
+
+            <p>{{ employee.phone }}</p>
+
+        </div>
+
+        <div class="box">
+
+            <h4>🏢 Department</h4>
+
+            <p>{{ employee.department }}</p>
+
+        </div>
+
+    </div>
+
+    <a href="/dashboard/" class="btn">
+
+        ← Back to Dashboard
+
+    </a>
+
+</div>
+
+</body>
+</html>

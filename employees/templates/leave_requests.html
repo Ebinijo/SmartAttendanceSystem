@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Requests</title>
+</head>
+<body>
+
+<h2>Leave Requests</h2>
+
+<table border="1">
+
+<tr>
+
+<th>Employee</th>
+
+<th>From Date</th>
+
+<th>To Date</th>
+
+<th>Reason</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+{% for leave in requests %}
+
+<tr>
+
+<td>{{ leave.employee.name }}</td>
+
+<td>{{ leave.from_date }}</td>
+
+<td>{{ leave.to_date }}</td>
+
+<td>{{ leave.reason }}</td>
+
+<td>{{ leave.status }}</td>
+
+<td>
+
+<a href="/approve-leave/{{leave.id}}/">
+Approve
+</a>
+
+|
+
+<a href="/reject-leave/{{leave.id}}/">
+Reject
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
